@@ -1,7 +1,7 @@
 FROM maxexcloo/debian:latest
 MAINTAINER Max Schaefer <max@excloo.com>
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62 && \
-	echo "deb http://www.nginx.org/packages/debian/ wheezy nginx" > /etc/apt/sources.list.d/nginx.list && \
+	echo "deb http://nginx.org/packages/mainline/debian/ wheezy nginx" >> /etc/apt/sources.list && \
 	apt-get update && \
 	apt-get install -y nginx && \
 	apt-get clean && \
